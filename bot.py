@@ -13,8 +13,11 @@ from telegram.ext import (
     filters,
 )
 
-TOKEN = "8660116841:AAHYRppOiooGqZoLVT-ElgATAwwrfXZSCCg"
-ADMIN_ID = 1353810188
+import os
+
+TOKEN = os.getenv("TOKEN")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
+
 
 users = {}
 pending_deposits = {}
